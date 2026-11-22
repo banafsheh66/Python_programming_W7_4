@@ -9,7 +9,7 @@ class TIMESTAMP:
     price = 0.0
 
 
-def readFile(PFilename, PTimestamps):
+def readTimestamps(PFilename, PTimestamps):
     print('Reading file "{}".'.format(PFilename))
 
     PTimestamps.clear()
@@ -36,7 +36,7 @@ def readFile(PFilename, PTimestamps):
     return None
 
 
-def displayResults(PTimestamps):
+def displayTimestamps(PTimestamps):
     print("Electricity usage:")
 
     for Timestamp in PTimestamps:
@@ -60,8 +60,8 @@ def main():
 
     Filename = input("Insert filename: ")
 
-    readFile(Filename, Timestamps)
-    displayResults(Timestamps)
+    readTimestamps(Filename, Timestamps)
+    displayTimestamps(Timestamps)
 
     Timestamps.clear()
 
@@ -69,4 +69,5 @@ def main():
     return None
 
 
-main()
+if __name__ == "__main__":
+    main()
